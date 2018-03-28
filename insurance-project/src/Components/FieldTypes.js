@@ -5,9 +5,14 @@ import FieldType from './FieldType';
 class FieldTypes extends React.Component{  
     componentDidMount(){
         this.props.loadSampleFieldType();
-    }    
+        
+    } 
+    // filterFieldType(event) => {
+
+    // }   
     render(){
         return (
+            
             <div className="left-container">
                 <h2>Field Types</h2>
                 <form className='filter'>

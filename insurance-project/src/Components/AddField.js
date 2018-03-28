@@ -19,7 +19,6 @@ class AddField extends React.Component{
         this.setState({detailsShown: false})
     } 
     render(){
-        const detailsShown = false
         return (
             <div className='main-container'>
                 <FieldTypes 

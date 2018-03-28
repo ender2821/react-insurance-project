@@ -6,8 +6,8 @@ class FieldDetails extends React.Component{
     render(){
         return (
             <div className='right-container'>
-                <div class="field-details-wrap">
-                    <div class="col-3">
+                <div className="field-details-wrap">
+                    <div className="col-3">
                         <h2>Field Details</h2>
                         <form>
                             <label>Display Label</label>
@@ -33,7 +33,7 @@ class FieldDetails extends React.Component{
                             <input type='text' name='Validation Error Message' />
                         </form>
                     </div>   
-                    <div class='col-3'>
+                    <div className='col-3'>
                         <h2>Tags</h2>
                         <h4>Tag Group</h4>
                         <ul className='tags'>
@@ -44,7 +44,7 @@ class FieldDetails extends React.Component{
                         <h4>Tags</h4>
                         <span>Select a tag group to see individual tags</span>
                     </div>
-                    <div class='col-3'>
+                    <div className='col-3'>
                         <h2>Field Groups</h2>
                         <h4>Choose a group for this input</h4>
                     </div>                 
