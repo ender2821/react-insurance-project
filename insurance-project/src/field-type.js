@@ -1,21 +1,21 @@
 const fieldType = {
     card1: {
         name: 'text',
-        icon: '<i class="fas fa-font"></i>',
+        icon: 'fas fa-font',
         definition: 'String of text',
         display: 'Free-form text input'
     },
     card2: {
         name: 'Date',
-        icon: '<i class="far fa-calendar-alt"></i>',
+        icon: 'far fa-calendar',
         definition: 'Standard ISO format date',
-        display: 'Datepicker, with configurable format'        
+        display: 'Datepicker, with configurable format'
     },
     card3: {
         name: 'Vin',
-        icon: '<i class="fas fa-car"></i>',
+        icon: 'fas fa-car',
         definition: 'Vehicle Identification Number',
-        display: 'Free-form text input'         
+        display: 'Free-form text input'
     },
 };
 

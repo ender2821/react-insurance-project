@@ -17,6 +17,7 @@ class Header extends React.Component{
                     <li className='active'><i class="fas fa-book"></i>Lines</li>
                     <li><i class="fas fa-th"></i>All Modules</li>
                 </ul>
+                <p className='page-title'>Comercial Property - Add Field</p>
             </header>
         );
     }

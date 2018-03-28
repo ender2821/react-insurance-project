@@ -1,7 +1,7 @@
 import React from 'react';
 import ButtonBar from './ButtonBar';
 
-class AddField extends React.Component{
+class FieldDetails extends React.Component{
     
     render(){
         return (
@@ -49,10 +49,10 @@ class AddField extends React.Component{
                         <h4>Choose a group for this input</h4>
                     </div>                 
                 </div>
-                <ButtonBar />
+                <ButtonBar unloadFieldDetails={this.props.unloadFieldDetails}/>
             </div>
         );
     }
 }
 
-export default AddField;
+export default FieldDetails;

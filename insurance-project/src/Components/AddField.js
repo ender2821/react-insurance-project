@@ -1,20 +1,36 @@
 import React from 'react';
 import FieldTypes from './FieldTypes';
 import FieldDetails from './FieldDetails';
-import data from '../field-type';
+import NoFieldDetails from './NoFieldDetails';
+import fieldType from '../field-type';
 
 class AddField extends React.Component{
     state = {
-        fieldType: {}
+        fieldType: {},
+        detailsShown: false,
     };   
     loadSampleFieldType = () => {
-        this.setState({fieldType: data});
+        this.setState({fieldType});
     };
+    loadFieldDetails = () => {
+        this.setState({detailsShown: true})
+    };
+    unloadFieldDetails = () => {
+        this.setState({detailsShown: false})
+    } 
     render(){
+        const detailsShown = false
         return (
             <div className='main-container'>
-                <FieldTypes fieldType={this.state.fieldType} loadSampleFieldType={this.loadSampleFieldType}/>
-                <FieldDetails />
+                <FieldTypes 
+                    fieldType={this.state.fieldType} 
+                    filterFieldType={this.state.filterFieldType}
+                    loadSampleFieldType={this.loadSampleFieldType}                    
+                    loadFieldDetails={this.loadFieldDetails}
+                    />
+                {this.state.detailsShown ? 
+                    <FieldDetails unloadFieldDetails={this.unloadFieldDetails}/> : 
+                    <NoFieldDetails />}
             </div>
         );
     }

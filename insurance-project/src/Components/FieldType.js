@@ -1,16 +1,16 @@
 import React from 'react';
 
 class FieldType extends React.Component{
-    
     render(){
+        const {definition, display, icon, name} = this.props.details;
         return (
-            <div className='field-type-wrap'>
-                <h3><i class="fas fa-font"></i>Text</h3>
+            <li className='field-type-wrap' onClick={this.props.loadFieldDetails}>
+                <h3><i className={icon}></i>{name}</h3>
                 <span>Definition</span>
-                <p>String of text</p>
+                <p>{definition}</p>
                 <span>Default Display</span>
-                <p>Free-form text input</p>
-            </div>
+                <p>{display}</p>
+            </li>
         );
     }
 }

@@ -30,3 +30,11 @@ header {
       background: #00838F; }
     header .logo img {
       width: 200px; }
+  header .page-title {
+    margin-left: auto;
+    display: block;
+    padding: 2rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: #B0BEC5; }
