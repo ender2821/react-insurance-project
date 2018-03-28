@@ -80,26 +80,106 @@ header {
     header .logo img {
       width: 200px; }
 
+.field-type-wrap {
+  width: 100%;
+  padding: 2rem;
+  background: #fff;
+  margin-top: 2rem;
+  border: #CFD8DC 1px solid;
+  cursor: pointer;
+  border-radius: 5px; }
+  .field-type-wrap svg {
+    display: inline-block;
+    margin-right: 1rem; }
+  .field-type-wrap h3 {
+    font-size: 2rem;
+    color: #263238;
+    margin-bottom: 2rem;
+    display: inline-block;
+    width: 100%;
+    font-weight: 700; }
+  .field-type-wrap span {
+    font-size: 1.4rem;
+    color: #607D8B;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: 100%; }
+  .field-type-wrap p {
+    color: #263238;
+    margin-bottom: 2rem;
+    display: inline-block;
+    width: 100%; }
+
 .field-details-wrap {
   height: calc(100% - 6rem);
   width: 100%; }
 
 .button-bar {
   width: 100%;
-  background: gray;
   height: 6rem;
-  position: realtive; }
+  position: realtive;
+  border-top: #CFD8DC 1px solid; }
+  .button-bar .buttons {
+    display: flex;
+    float: right; }
+  .button-bar .btn {
+    width: 15rem;
+    line-height: 2rem;
+    border: none;
+    padding: 1rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem 1rem 0 0;
+    cursor: pointer; }
+  .button-bar .delete {
+    background: #F44336;
+    transition: background 0.2s ease;
+    color: #fff; }
+    .button-bar .delete:hover, .button-bar .delete:active {
+      background: #D32F2F; }
+  .button-bar .save {
+    background: #1E88E5;
+    transition: background 0.2s ease;
+    color: #fff; }
+    .button-bar .save:hover, .button-bar .save:active {
+      background: #1565C0; }
+  .button-bar .secondary {
+    background: none;
+    transition: background 0.2s ease; }
+    .button-bar .secondary:hover, .button-bar .secondary:active {
+      background: #CFD8DC; }
 
 html {
   font-size: 62.5%; }
 
 body {
   font-size: 1.6rem;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  color: #263238; }
 
 body, html, #root, .App {
   width: 100%;
   height: 100%; }
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem; }
+
+label {
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding-left: 1rem;
+  font-size: 1.4rem;
+  color: #607D8B; }
+
+input {
+  height: 4rem;
+  border: #CFD8DC 1px solid;
+  width: 100%;
+  padding: 1rem;
+  line-height: 2rem;
+  font-size: 1.6rem; }
 
 .main-container {
   height: calc(100% - 6rem);
@@ -108,7 +188,8 @@ body, html, #root, .App {
 .left-container {
   width: 25%;
   height: 100%;
-  background: #ECEFF1; }
+  background: #ECEFF1;
+  padding: 3vw; }
 
 .right-container {
   width: 75%;

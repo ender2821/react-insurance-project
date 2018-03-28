@@ -12,11 +12,33 @@ html{
 body{
   font-size:1.6rem;
   font-family:$roboto;
+  color:$main-text;
 }
 
 body, html, #root, .App{
   width:100%;
   height:100%;
+}
+
+h2{
+  font-size:2.4rem;
+  font-weight:700;
+  margin-bottom:2rem;
+}
+label{
+  margin-bottom:1rem;
+  display:inline-block;
+  padding-left:1rem;
+  font-size:1.4rem;
+  color:$form-labels;
+}
+input{
+  height:4rem;
+  border:$main-borders 1px solid;
+  width:100%;
+  padding:1rem;
+  line-height:2rem;
+  font-size:1.6rem;
 }
 
 .main-container{
@@ -28,6 +50,7 @@ body, html, #root, .App{
   width:25%;
   height:100%;
   background:$left-container-bg;
+  padding:3vw;
 }
 
 .right-container{

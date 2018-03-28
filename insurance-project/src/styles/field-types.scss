@@ -1,0 +1,34 @@
+.field-type-wrap{
+    width:100%;
+    padding:2rem;
+    background:$card;
+    margin-top:2rem;
+    border:$main-borders 1px solid;
+    cursor:pointer;
+    border-radius:5px;
+    svg{
+        display:inline-block;
+        margin-right:1rem;
+    }
+    h3{
+        font-size:2rem;
+        color:$main-text;
+        margin-bottom:2rem;
+        display:inline-block;
+        width:100%;
+        font-weight:700;
+    }
+    span{
+        font-size:1.4rem;
+        color:$form-labels;
+        margin-bottom:1rem;
+        display:inline-block;
+        width:100%;
+    }
+    p{
+        color:$main-text;
+        margin-bottom:2rem;
+        display:inline-block;
+        width:100%;
+    }
+}
