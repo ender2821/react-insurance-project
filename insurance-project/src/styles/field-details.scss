@@ -63,6 +63,26 @@
         display:inline-block;
         font-size:1.4rem;
         color:$form-labels;        
-    }  
+    } 
+    .btn{
+        width:100%;
+        border:none;
+        padding:1rem;
+        font-weight:700;
+        text-align:center;
+        margin:0 0 1rem 0;
+        cursor:pointer;
+        &.secondary{
+            background:none;
+            transition:background 0.2s ease;
+            &:hover, &:active{
+                background:$secondary-hover;
+            }
+        } 
+    }
+    .group-button{
+        width:100%;
+        text-align:center;
+    }
 }
 

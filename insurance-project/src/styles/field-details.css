@@ -52,3 +52,19 @@
     display: inline-block;
     font-size: 1.4rem;
     color: #607D8B; }
+  .field-details-wrap .btn {
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    cursor: pointer; }
+    .field-details-wrap .btn.secondary {
+      background: none;
+      transition: background 0.2s ease; }
+      .field-details-wrap .btn.secondary:hover, .field-details-wrap .btn.secondary:active {
+        background: #CFD8DC; }
+  .field-details-wrap .group-button {
+    width: 100%;
+    text-align: center; }
