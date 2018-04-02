@@ -8,12 +8,15 @@ class AddField extends React.Component{
     state = {
         fieldType: {},
         detailsShown: false,
+        buttonActive: false
     };   
     loadSampleFieldType = () => {
         this.setState({fieldType});
     };
     loadFieldDetails = () => {
-        this.setState({detailsShown: true})
+        this.setState({
+            detailsShown: true
+        })
     };
     unloadFieldDetails = () => {
         this.setState({detailsShown: false})
