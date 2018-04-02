@@ -1,9 +1,29 @@
 import React from 'react';
 import ButtonBar from './ButtonBar';
+import { tagGroups, tags } from '../tags';
+
+class Tags extends React.Component {
+    render() {
+        return(
+            <ul className='tags'>
+                {this.props.tags.map((tag, key) => {
+                    return (
+                        <li key={key} onClick={this.props.tagClicked && this.props.tagClicked.bind(this, tag)}>
+                            {tag}
+                        </li>
+                    )
+                })}
+            </ul>
+        );
+    }
+}
 
 class FieldDetails extends React.Component{
     state = {
-        referenceName: ''
+        referenceName: '',
+        tags: {},
+        tagGroups: [],
+        selectedTagGroup: '',
     }
     removeSpaces = (event) => {
         const value = event.target.value;
@@ -20,7 +40,17 @@ class FieldDetails extends React.Component{
             console.log('FAILED');
         }
     }
-
+    loadSampleTags = () => {
+        this.setState({tags});
+        this.setState({tagGroups})
+    };
+    componentDidMount(){
+        this.loadSampleTags();
+    } 
+    tagGroupClicked = (tagGroup, e) => {
+        this.setState({selectedTagGroup: tagGroup})
+    }
+       
     render(){
         return (
             <div className='right-container'>
@@ -55,13 +85,15 @@ class FieldDetails extends React.Component{
                     <div className='col-3'>
                         <h2>Tags</h2>
                         <h4>Tag Group</h4>
-                        <ul className='tags'>
-                            <li>Vinamster</li>
-                            <li>ISO</li>
-                            <li>Tag 3</li>
-                        </ul>
+                        <Tags tags={this.state.tagGroups} tagClicked={this.tagGroupClicked} />
                         <h4>Tags</h4>
-                        <span>Select a tag group to see individual tags</span>
+                        { this.state.selectedTagGroup != '' ? (
+                            <Tags tags={this.state.tags[this.state.selectedTagGroup]} />
+                        ) : (
+                            <span>Select a tag group to see individual tags</span>    
+                        )
+                        }
+                        
                     </div>
                     <div className='col-3'>
                         <h2>Field Groups</h2>
@@ -70,7 +102,7 @@ class FieldDetails extends React.Component{
                         <ul className='group-container'>
                             <li className='group-button'>Example Group</li>
                         </ul>
-                    </div>                 
+                    </div>                
                 </div>
                 <ButtonBar unloadFieldDetails={this.props.unloadFieldDetails}/>
             </div>
